@@ -75,14 +75,14 @@ button[type="submit"]:hover {
 		<?php
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$domains = $_POST['domains'];
-			path = $_POST['path'];
+			$path = $_POST['path'];
 			$lines = explode("\n", $domains);
 			foreach ($lines as $line) {
 				$line = trim($line);
 				if ($line != '') {
-					$url = 'http://' . $line . '/' . path;
+					$url = 'http://' . $line . '/' . $path;
 					$status = @get_headers($url)[0];
-					echo '<p>' . $line . '/' . path . ' - ' . $status . '</p>';
+					echo '<p>' . $line . '/' . $path . ' - ' . $status . '</p>';
 				}
 			}
 		}
