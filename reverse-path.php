@@ -68,21 +68,21 @@ button[type="submit"]:hover {
 		<form method="post">
 			<label for="domains">Domains:</label>
 			<textarea id="domains" name="domains" rows="10" cols="50"></textarea>
-			<label for="file">File:</label>
-			<input type="text" id="file" name="file">
+			<label for="path">Path:</label>
+			<input type="text" id="path" name="path">
 			<button type="submit">Check</button>
 		</form>
 		<?php
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$domains = $_POST['domains'];
-			$file = $_POST['file'];
+			path = $_POST['path'];
 			$lines = explode("\n", $domains);
 			foreach ($lines as $line) {
 				$line = trim($line);
 				if ($line != '') {
-					$url = 'http://' . $line . '/' . $file;
+					$url = 'http://' . $line . '/' . path;
 					$status = @get_headers($url)[0];
-					echo '<p>' . $line . '/' . $file . ' - ' . $status . '</p>';
+					echo '<p>' . $line . '/' . path . ' - ' . $status . '</p>';
 				}
 			}
 		}
