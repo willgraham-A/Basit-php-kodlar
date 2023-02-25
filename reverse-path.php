@@ -67,9 +67,9 @@ button[type="submit"]:hover {
 		<h1>Reverse Path Checker</h1>
 		<form method="post">
 			<label for="domains">Domains:</label>
-			<textarea id="domains" name="domains" rows="10" cols="50"></textarea>
+			<textarea name="domains" rows="10" cols="50"></textarea>
 			<label for="path">Path:</label>
-			<input type="text" id="path" name="path">
+			<input type="text" name="path">
 			<button type="submit">Check</button>
 		</form>
 		<?php
