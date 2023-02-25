@@ -1,2 +1,2 @@
 # basit php kodlar
-Basit php kodlarımı burada paylaşıyorum
+Basit php kodlarımı buraya koyuyorum
